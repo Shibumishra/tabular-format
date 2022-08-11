@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.fixed_headers {
+  margin: 0 10px;
+  table-layout: fixed;
+  border-collapse: collapse;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .fixed_headers
+  th,
+  td {
+    padding: 5px;
+    text-align: left;
+    border: 1px solid #000;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+   td:nth-child(1),
+  th:nth-child(1) {
+    min-width: 200px;
   }
-  to {
-    transform: rotate(360deg);
+  td:nth-child(2),
+  th:nth-child(2) {
+    min-width: 200px;
   }
+  td:nth-child(3),
+  th:nth-child(3) {
+    width: 350px;
+  }
+  td:nth-child(4),
+  th:nth-child(4) {
+    width: 350px;
+  }
+  td:nth-child(5),
+  th:nth-child(5) {
+    width: 350px;
+  }
+  td:nth-child(6),
+  th:nth-child(6) {
+    width: 350px;
+  }
+  thead {
+    background-color: #333;
+    color: #fdfdfd;
+  }
+  thead tr {
+      display: block;
+      position: relative;
+    }
+  
+  tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 550px;
+  }
+  tbody tr:nth-child(even) {
+      background-color: #ddd;
+    }
+  
+
+.old_ie_wrapper {
+  height: 300px;
+  width: 750px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.old_ie_wrapper tbody {
+    height: auto;
 }
